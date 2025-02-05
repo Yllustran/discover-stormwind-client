@@ -1,0 +1,16 @@
+
+
+
+.regular-btn {
+    margin-left: 50px;
+    background-color: var(--Royal-blue);
+    color: var(--Royal-gold);
+    font-weight: bold;
+    border-radius: 22px;
+    padding: 3px 22px; 
+    border: none;
+  }
+  .regular-btn:hover {
+    color: var(--Royal-grey);
+    background-color: var(--Royal-blue);
+  }
