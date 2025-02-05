@@ -1,7 +1,6 @@
 .map-container {
-    height: 80vh; 
+    height: 85vh; 
     min-height: 450px;
-    padding: 1.5rem;
-    border-radius: 0 22%  ;
+    padding: 2rem;
     box-shadow: 0 0 5px 2px black;
   }

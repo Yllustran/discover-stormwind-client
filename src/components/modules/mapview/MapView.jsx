@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import mapImage from "../../../assets/images/mapview.jpg";
 import L from "leaflet";
 import './MapView.css'
+import MarkersList from "../../ui/markerlists/MarkerList";
 
 const MapView = () => {
   const bounds = [
@@ -20,14 +21,12 @@ const MapView = () => {
         bounds={bounds}
         maxBounds={bounds}
         maxBoundsViscosity={1}
-        minZoom={-1.57}
+        minZoom={-1.5}
         maxZoom={0}
         scrollWheelZoom={true}
         className="border border-dark bg-transparent w-100 w-md-75 w-lg-50 map-container">
         <ImageOverlay url={mapImage} bounds={bounds} />
-        <Marker position={MiddleMarker}>
-          <Popup>Voici un marqueur !</Popup>
-        </Marker>
+        <MarkersList />
       </MapContainer>
     </div>
   );
