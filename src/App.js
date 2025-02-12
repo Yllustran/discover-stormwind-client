@@ -5,9 +5,15 @@ import LoginPage from './components/pages/LoginPage';
 import CategoryListPage from './components/pages/categories/CategoryListPage';
 import CategoryCreatePage from './components/pages/categories/CategoryCreatePage';
 import CategoryUpdatePage from './components/pages/categories/CategoryUpdatePage';
+
+import PlaceListPage from "./components/modules/places/PlaceList";
+import PlaceCreatePage from "./components/pages/places/PlaceCreatePage";
+import PlaceUpdatePage from "./components/pages/places/PlaceUpdatePage"; 
+
 import Logout from './components/modules/logout/Logout';
 import Navigation from './components/modules/navigation/Navigation';
 import ProtectedRoute from "./components/modules/ProtectedRoute";
+
 
 const App = () => {
   return (
@@ -24,6 +30,10 @@ const App = () => {
           <Route path="/categories" element={<CategoryListPage />} />
           <Route path="/categories/new" element={<CategoryCreatePage />} />
           <Route path="/categories/edit/:id" element={<CategoryUpdatePage />} />
+
+          <Route path="/places" element={<PlaceListPage />} /> 
+          <Route path="/places/new" element={<PlaceCreatePage />} /> 
+          <Route path="/places/edit/:id" element={<PlaceUpdatePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
