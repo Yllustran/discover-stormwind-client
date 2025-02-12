@@ -4,10 +4,10 @@ import L from "leaflet";
 import DefaultIcon from "../../../assets/images/icon/defaultIcon.png";
 import TouristIcon from "../../../assets/images/icon/touristIcon.png";
 import MerchantIcon from "../../../assets/images/icon/MerchantIcon.png";
-import '../buttons/RegularButton.css'
+import '../buttons/RegularButton.css';
 import "./CutomMarker.css";
 
-
+// Mapping entre les catégories et les icônes
 const iconMapping = {
   default: DefaultIcon,
   tourist: TouristIcon,
@@ -17,13 +17,12 @@ const iconMapping = {
 const CustomMarker = ({ position, name, description, image, type = "default"}) => {
   const selectedIcon = iconMapping[type] || DefaultIcon;
 
-    const customIcon = L.icon({
-      iconUrl: selectedIcon, // Image du marqueur
-      iconSize: [25, 25], // Taille
-      iconAnchor: [20, 40], // Ancrage
-      popupAnchor: [0, -35], // Position du popup
-    });
-  
+  const customIcon = L.icon({
+    iconUrl: selectedIcon,
+    iconSize: [25, 25],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -35],
+  });
 
   return (
     <LeafletMarker position={position} icon={customIcon} className="icon-popup">
